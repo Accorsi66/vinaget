@@ -1,5 +1,7 @@
 FROM php:5.6-apache
 
+ENV PORT 8080
+
 COPY . /var/www/html
 
 RUN apt-get update && \
@@ -22,7 +24,5 @@ RUN docker-php-ext-install mcrypt && \
 
 RUN chown -R www-data:www-data /var/www/ && \
     service apache2 restart
-
-ENV PORT 8080
 
 CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && docker-php-entrypoint apache2-foreground
