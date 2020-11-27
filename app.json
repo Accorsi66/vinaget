@@ -1,0 +1,7 @@
+{
+  "name": "Heroku Vinaget",
+  "description": "Run Vinaget on heroku",
+  "repository": "https://github.com/alamia442/vinaget",
+  "keywords": ["Vinaget"],
+  "stack": "container"
+}
