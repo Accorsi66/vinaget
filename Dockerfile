@@ -22,7 +22,6 @@ RUN docker-php-ext-install mcrypt && \
     chmod 666 /var/www/html/data/log.txt && \
     chmod 666 /var/www/html/data/datafile_descrypt.html
 
-RUN chown -R www-data:www-data /var/www/ && \
-    service apache2 restart
+RUN chown -R www-data:www-data /var/www/
 
 CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && docker-php-entrypoint apache2-foreground
