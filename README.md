@@ -1,3 +1,9 @@
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+After deploy >>
+heroku labs:enable --app=appname runtime-new-layer-extract
+
 *** CAUTION: From v25, file config.dat has been changed because of new config menu, please re-create it (including chmod 666 file) or clone new vinaget ***    
 New Vinaget Script 3.3 LTS - Developed by LTT  
 Worked with PHP 7. Required: php-curl, php-mbstring, php-mcrypt, mod_rewrite (apache)  
