@@ -11,7 +11,6 @@ COPY ./ports.conf /etc/apache2/ports.conf
 
 RUN docker-php-ext-install mcrypt && \
     docker-php-ext-install mbstring && \
-    docker-php-ext-install curl && \
     a2enmod rewrite && \
     chmod 777 -R /var/www/html/data && \
     chmod 666 /var/www/html/data/account.dat && \
